@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>正体不明のブックマークレット（OPENREC）</title>
+<meta name="viewport" content="width=480">
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" type="text/css">
+<style>
+.content_frame {
+	max-width: 960px;
+	margin: 0px auto;
+}
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 95%;
+	background: #fff;
+}
+
+img {
+	max-width: 98%;
+}
+
+div#body {
+	max-width: 960px;
+	min-height: 480px;
+	margin: 0px auto;
+	padding: 16px;
+	font-size: 18px;
+	font-family: "Noto Sans JP","游ゴシック","Yu Gothic",YuGothic,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"MS ゴシック",sans-serif;
+	background: #fffafa;
+	border: 1px solid silver;
+}
+
+h1 {
+	font-size: 24px;
+	border-bottom: 1px solid #000;
+}
+
+h2 {
+	font-size: 20px;
+	border-bottom: 1px solid #aaa;
+}
+
+a {
+	font-size: 1.1em;
+	color: #21a;
+}
+
+input[type="button"], button {
+	min-width: 80px;
+	margin: 12px;
+	padding: 8px 10px 6px;
+	text-decoration: none;
+	box-shadow: 2.828px 2.828px 3px 0px rgba( 0, 0, 0, 0.3 ) inset;
+	border-style: none;
+	border-radius: 6px;
+	background: #bbd;
+	color: #333;
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #fff;
+	cursor: pointer;
+}
+input[type="button"]:hover, button:hover {
+	background: #eee;
+}
+input[type="button"]:active, button:active {
+	background: #eee;
+	box-shadow: -3px -3px 3px 0px rgba( 0, 0, 0, 0.3 ) inset;
+	margin: 13px 11px 11px 13px;
+}
+input[type="button"][disabled], button[disabled] {
+	background: gray;
+}
+
+.single_page_dialog {
+	width: 98%;
+	background: #fff;
+	box-shadow: 2.828px 2.828px 4px 0px rgba( 0, 0, 0, 0.3 );
+}
+
+.dialog_caption {
+	margin: 0px;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	text-indent: 0.5em;
+	width: 100%;
+	background: #0a6;
+	color: #fff;
+}
+
+.common_error .dialog_caption {
+	background: #b04;
+}
+
+.dialog_message {
+	margin: 30px 25px;
+}
+
+.dialog_buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.submit_button {
+	min-width: 25%;
+}
+</style>
+</head>
+<body>
+<div id="body">
+<div class="content_frame">
+<h1>OPENRECのスタンプ履歴へもちこスタンプを強制的に呼び戻すブックマークレット</h1>
+<div>
+<br>
+●まず以下のリンクをブラウザーのブックマークバーなどへドラッグして、ブックマークレットを登録してください。<br>
+【 <a href="javascript:var adata=[{groupId:22,id:633,imageUrl:&quot;https://dqd0jw5gvbchn.cloudfront.net/stamp/22/128/d1f790581fe20e9dee537f194cf66aafbb2775ea.png&quot;},{groupId:25,id:735,imageUrl:&quot;https://dqd0jw5gvbchn.cloudfront.net/stamp/25/128/d7f765bf34de260ccc3538f8e9412ee4b3935828.png&quot;}];var key=&quot;&quot;;for(var i=0;i&lt;localStorage.length;i++){if(localStorage.key(i).substring(0,&quot;or:stamp-histories&quot;.length)===&quot;or:stamp-histories&quot;){var h=JSON.parse(localStorage[(key=localStorage.key(i))]);break;}}if(key===&quot;&quot;){alert(&quot;失敗…&quot;);}else{for(var idx in adata){for(var i=0;i&lt;h.length;i++){if(h[i][&quot;id&quot;]===adata[idx][&quot;id&quot;]){h.splice(i,1);break;}}h.unshift(adata[idx]);}localStorage.setItem(key,JSON.stringify(h));}">motiko modottekoi!</a> 】<br>
+<br>
+※Google Chromeの場合こんな感じ。あらかじめブックマークバーを表示する設定にしておく必要あり。<br>
+<img src="img/openrec1.1.png" style="border:1px solid black;"><br>
+<br>
+<br>
+●OPENREC.tvのサイトをブラウザーで開きます。<br>
+<a href="https://www.openrec.tv/" target="_blank">OPENREC.tv</a><br>
+<br>
+<br>
+●先ほど登録したブックマークを呼び出します。（実行するのはOPENRECトップページでOK。なお実行しても見た目上なにも起こりません）<br>
+<img src="img/openrec1.2.png" style="border:1px solid black;"><br>
+※注意：スタンプ履歴が1個もない状態では「失敗…」と表示されてうまく行きません。どこか待機所あたりで、どれでもいいのでスタンプを1回送信してからもう一度試してください。<br>
+<br>
+<br>
+●以上で手順終了です。成功していればチャットのスタンプ履歴の先頭に、もちこスタンプが出現しています。<br>
+<br>
+before<br>
+<img src="img/openrec1.3.png" style="border:1px solid black;"><br>
+after<br>
+<img src="img/openrec1.4.png" style="border:1px solid black;"><br>
+</div>
+</div>
+</div>
+</body>
+</html>
