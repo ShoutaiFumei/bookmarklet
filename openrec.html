@@ -116,10 +116,15 @@ input[type="button"][disabled], button[disabled] {
 <h1>OPENRECのスタンプ履歴へもちこスタンプを強制的に呼び戻すブックマークレット</h1>
 <div>
 <br>
+●はじめに…<br>
+スマートフォンアプリにこれを適用する手段は今のところわかっておりません…。（小声）<br>
+よってご覧の手順はパソコン版のみ対応です。<br>
+<br>
+<br>
 ●まず以下のリンクをブラウザーのブックマークバーなどへドラッグして、ブックマークレットを登録してください。<br>
 【 <a href="javascript:var adata=[{groupId:22,id:633,imageUrl:&quot;https://dqd0jw5gvbchn.cloudfront.net/stamp/22/128/d1f790581fe20e9dee537f194cf66aafbb2775ea.png&quot;},{groupId:25,id:735,imageUrl:&quot;https://dqd0jw5gvbchn.cloudfront.net/stamp/25/128/d7f765bf34de260ccc3538f8e9412ee4b3935828.png&quot;}];var key=&quot;&quot;;for(var i=0;i&lt;localStorage.length;i++){if(localStorage.key(i).substring(0,&quot;or:stamp-histories&quot;.length)===&quot;or:stamp-histories&quot;){var h=JSON.parse(localStorage[(key=localStorage.key(i))]);break;}}if(key===&quot;&quot;){alert(&quot;失敗…&quot;);}else{for(var idx in adata){for(var i=0;i&lt;h.length;i++){if(h[i][&quot;id&quot;]===adata[idx][&quot;id&quot;]){h.splice(i,1);break;}}h.unshift(adata[idx]);}localStorage.setItem(key,JSON.stringify(h));}">motiko modottekoi!</a> 】<br>
 <br>
-※Google Chromeの場合こんな感じ。あらかじめブックマークバーを表示する設定にしておく必要あり。<br>
+※Google Chromeの場合こんな感じ。あらかじめブックマークバーを表示する設定にしておく。<br>
 <img src="img/openrec1.1.png" style="border:1px solid black;"><br>
 <br>
 <br>
@@ -143,6 +148,10 @@ after<br>
 <span style="font-weight:bold;">※その他注意事項</span><br>
 ・OPENRECプレミアム会員でログインしている必要があります。<br>
 ・スタンプ履歴が最大何個か知らないので、既にたくさん履歴がある時どのような挙動をするのかわかっておりません。<br>
+・Google Chromeでしか動作確認していない。<br>
+<br>
+一応、コード全文をテキストボックスに入れておきます。（コピペで登録を行う人向け）<br>
+<input type="text" style="width:98%; height:1.5em;" value="javascript:var adata=[{groupId:22,id:633,imageUrl:&quot;https://dqd0jw5gvbchn.cloudfront.net/stamp/22/128/d1f790581fe20e9dee537f194cf66aafbb2775ea.png&quot;},{groupId:25,id:735,imageUrl:&quot;https://dqd0jw5gvbchn.cloudfront.net/stamp/25/128/d7f765bf34de260ccc3538f8e9412ee4b3935828.png&quot;}];var key=&quot;&quot;;for(var i=0;i&lt;localStorage.length;i++){if(localStorage.key(i).substring(0,&quot;or:stamp-histories&quot;.length)===&quot;or:stamp-histories&quot;){var h=JSON.parse(localStorage[(key=localStorage.key(i))]);break;}}if(key===&quot;&quot;){alert(&quot;失敗…&quot;);}else{for(var idx in adata){for(var i=0;i&lt;h.length;i++){if(h[i][&quot;id&quot;]===adata[idx][&quot;id&quot;]){h.splice(i,1);break;}}h.unshift(adata[idx]);}localStorage.setItem(key,JSON.stringify(h));}"><br>
 <br>
 </div>
 </div>
